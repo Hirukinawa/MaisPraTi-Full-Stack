@@ -57,6 +57,27 @@ for (let i = 0; i < fiboUnd; i++) {
 do...while, permita no máximo 3 tentativas. Exiba se ele acertou ou se esgotou as
 tentativas. */
 
+let senhaFixa = "********";
+let tentativas = 0;
+let tentativaSenha = prompt("Insira sua senha: ");
+
+if (tentativaSenha === senhaFixa) {
+    console.log("Senha correta! Bem-vindo(a)");
+} else {
+    do {
+        tentativa++;
+        console.log(`[SENHA INCORRETA] ${3 - tentativas} tentativas restantes!`);
+        tentativaSenhaSenha = prompt("Tente novamente: ");
+        if (tentativaSenha === senhaFixa) {
+            console.log("Senha correta! Bem-vindo(a)");
+        }
+    } while (tentativas < 3 || tentativaSenha === senhaFixa);
+    if (tentativas >= 3) {
+        console.log("[TENTATIVAS ESGOTADAS]");
+    }
+}
+
+
 /* 5. Leia um número N e exiba todos os números primos entre 2 e N usando laços
 aninhados (for dentro de for). Exiba também a quantidade total de primos
 encontrados. */
@@ -74,10 +95,44 @@ pagar. */
 trás para frente com um laço for, monte a palavra invertida. Exiba a palavra
 original, a invertida e informe se ela é um palíndromo. */
 
+let palavra = prompt("Insira um palavra: ");
+let palavraInvertida;
+for (let i = palavra.length; i > 0; i--) {
+    palavraInvertida += palavra[i - 1];
+}
+
+console.log(`A palavra ${palavra} ao contrário é ${palavraInvertida}`);
+
+if (palavraInvertida === palavra) {
+    console.log("E é um palíndromo");
+}
+
 /* 9. Sorteie um número entre 1 e 100 com Math.random(). Usando um laço do...while,
 peça ao usuário para adivinhar; a cada tentativa, diga se o número é maior ou
 menor. Registre as tentativas em um array e, ao acertar, exiba o histórico e
 quantas tentativas foram necessárias. */
+
+let randomNumber = parseInt(Math.random(1, 101) * 100);
+
+let tentativas = 0;
+let tentativaNumero = parseInt(prompt("Diga um número entre 1 e 100: "));
+let chutes = [];
+
+do {
+    tentativas++;
+    chutes.push(tentativaNumero);
+    if (tentativaNumero < randomNumber) {
+        console.log(`O número misterioso é maior que ${tentativaNumero}`);
+    } else if (tentativaNumero > randomNumber) {
+        console.log(`O número misterioso é menor que ${tentativaNumero}`);
+    }
+} while (tentativaNumero !== randomNumber);
+
+console.log(`Acertou miseravi, você levou ${tentativas} tentativas`);
+console.log(`Essas foram suas tentantivas:`);
+for (let i = 0; i < chutes.length; i++) {
+    console.log(`${i + 1}ª tentativa: ${chutes[i]}`);
+}
 
 /* 10. Crie uma matriz 3×4 (3 alunos, 4 notas cada). Leia os valores via laços aninhados.
 Calcule e exiba a média de cada aluno, a média geral da turma e qual aluno teve
