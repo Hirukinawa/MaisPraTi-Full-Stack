@@ -212,13 +212,26 @@ let matrizAlunos = [
 let mediaGeral = 0;
 //6.25
 
+let mediaDoAluno = 0;
+
 let mediasAlunos = [];
 //5, 7.75, 6
 
+//for (a [index, value] of matrizAlunos.entries())
+for (a of matrizAlunos) {
+    for (n of a) {
+        mediaDoAluno += n;
+    }
+    mediaDoAluno = mediaDoAluno / a.length;
+    mediasAlunos.push(mediaDoAluno);
+    mediaGeral += mediaDoAluno;
+    console.log(`Media do aluno ${a.index + 1} - ${mediaDoAluno}`);
+}
 //for of da matriz
     //for of de cada elemento da matriz
         //calcula a media do aluno
         //coloca a media na matriz
         //soma a media geral
 
-console.log(matrizAlunos[0].length)
+mediaGeral = mediaGeral / matrizAlunos.length;
+console.log(`Média da turma - ${mediaGeral}`);
