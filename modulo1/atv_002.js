@@ -4,6 +4,8 @@ const prompt = require('prompt-sync')()
 laço for. Em seguida, pergunte se ele deseja ver outra tabuada e repita enquanto
 a resposta for "sim". */
 
+/* ------------------------------------------------------------------------------------ */
+
 let numeroTabuada;
 let opcaoTabuada;
 
@@ -18,6 +20,8 @@ do {
 /* 2. Leia um número inteiro positivo e, usando um laço while, calcule e exiba quantos
 dígitos ele possui. Trate o caso do número zero (que possui 1 dígito). */
 
+/* ------------------------------------------------------------------------------------ */
+
 let numeroInteiro = parseInt(prompt("Insira um número inteiro: "));
 let caracteres = [];
 let stringNumero;
@@ -31,13 +35,15 @@ if (!numeroInteiro.isNaN && numeroInteiro >= 0) {
             caracteres.push(stringNumero[i]);
         }
     }
-    console.log(`Esse número tem ${caracteres.length} caractere(s)`);
+    console.log(`O número ${numeroInteiro} tem ${caracteres.length} caractere(s)`);
 } else {
     console.log(`[ERRO] - INSIRA UM NÚMERO INTEIRO POSITIVO`);
 }
 
 /* 3. Peça ao usuário quantos termos da sequência de Fibonacci deseja ver e exiba-os
 usando um laço for. Exemplo: 1, 1, 2, 3, 5, 8, 13... */
+
+/* ------------------------------------------------------------------------------------ */
 
 let fiboUnd = parseInt(prompt("Quantos números da sequência de Fibonacci deseja ver? "));
 let fiboAtual = 1;
@@ -56,6 +62,8 @@ for (let i = 0; i < fiboUnd; i++) {
 /* 4. Defina uma senha fixa no código. Peça ao usuário que a digite e, usando um laço
 do...while, permita no máximo 3 tentativas. Exiba se ele acertou ou se esgotou as
 tentativas. */
+
+/* ------------------------------------------------------------------------------------ */
 
 let senhaFixa = "***";
 let tentativas = 0;
@@ -80,6 +88,8 @@ if (tentativaSenha === senhaFixa) {
 aninhados (for dentro de for). Exiba também a quantidade total de primos
 encontrados. */
 
+/* ------------------------------------------------------------------------------------ */
+
 let numeroPrimo = parseInt(prompt("Insira um número: "));
 let numerosPrimos = [];
 let countPrimos = 0;
@@ -100,6 +110,8 @@ console.log(`Foram encontrados ${numerosPrimos.length} números primos`);
 /* 6. Crie um array e leia via laço o nome e a nota de 5 alunos. Ao final, exiba: a média
 da turma, o nome do aluno com maior nota e o nome do aluno com menor nota.
 Não use funções prontas como Math.max(). */
+
+/* ------------------------------------------------------------------------------------ */
 
 let arrayAlunos = [["Arlindo", 8], ["Bruno", 6], ["Carlos", 10], ["Daniel", 9], ["Elias", 8]];
 let maiorNota = arrayAlunos[0];
@@ -125,6 +137,8 @@ console.log(`O aluno com a menor nota é ${menorNota[0]} com a nota ${menorNota[
 o usuário digitar "sair". Armazene em arrays. Ao final, liste todos os itens, exiba o
 subtotal, aplique 10% de desconto se houver mais de 3 itens e mostre o total a
 pagar. */
+
+/* ------------------------------------------------------------------------------------ */
 
 let carrinhoCompras = [];
 let novoProduto = "";
@@ -162,6 +176,8 @@ console.log(`----------`);
 trás para frente com um laço for, monte a palavra invertida. Exiba a palavra
 original, a invertida e informe se ela é um palíndromo. */
 
+/* ------------------------------------------------------------------------------------ */
+
 let palavra = prompt("Insira um palavra: ").toLowerCase();
 let palavraInvertida = "";
 for (let i = palavra.length; i > 0; i--) {
@@ -178,6 +194,8 @@ if (palavraInvertida === palavra) {
 peça ao usuário para adivinhar; a cada tentativa, diga se o número é maior ou
 menor. Registre as tentativas em um array e, ao acertar, exiba o histórico e
 quantas tentativas foram necessárias. */
+
+/* ------------------------------------------------------------------------------------ */
 
 let randomNumber = parseInt(Math.random(1, 101) * 100);
 let tentativaNumero;
@@ -204,6 +222,8 @@ for (let i = 0; i < chutes.length; i++) {
 /* 10. Crie uma matriz 3×4 (3 alunos, 4 notas cada). Leia os valores via laços aninhados.
 Calcule e exiba a média de cada aluno, a média geral da turma e qual aluno teve
 o melhor desempenho. */
+
+/* ------------------------------------------------------------------------------------ */
 
 let matrizAlunos = [
     [5, 5, 5, 5],
