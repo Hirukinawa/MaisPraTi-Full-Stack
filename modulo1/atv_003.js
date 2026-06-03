@@ -29,14 +29,69 @@ propriedades: nome, vida, ataque e defesa. Use for...in para exibir os atributos
 cada personagem lado a lado e determine qual deles tem maior poder total
 (soma de vida + ataque + defesa). */
 
+/* const char1 = {
+    nome: "Mega Charizard Y",
+    vida: 78,
+    ataque: 159,
+    defesa: 115,
+}
 
+const char2 = {
+    nome: "Rayquaza",
+    vida: 105,
+    ataque: 150,
+    defesa: 90,
+}
+
+let totalChar1 = 0;
+let totalChar2 = 0;
+
+for (const key in char1) {
+    console.log(key);
+    console.log(`${char1[key]} - ${char2[key]}`);
+    if (typeof(char1[key]) == "number") {
+        totalChar1 += char1[key];
+        totalChar2 += char2[key];
+    }
+}
+
+console.log(`Total ${totalChar1} x ${totalChar2}`);
+
+if (totalChar1 > totalChar2) {
+    console.log(`${char1.nome} tem a maior soma de status`);
+} else if (totalChar2 > totalChar1) {
+    console.log(`${char2.nome} tem a maior soma de status`);
+} else {
+    console.log("EMPATE");
+} */
 
 /* ---------------------------------------------------------------------------------- */
 
 /* 3. Crie um objeto representando um funcionário com nome, cargo, salário e anos de
 experiência. Use for...in para listar todos os dados. Com base nos anos de
-experiência, calcule e exiba o bônus anual: até 2 anos = 5% do salário, de 3 a 5
-anos = 10%, acima de 5 anos = 15%. */
+experiência, calcule e exiba o bônus anual:
+até 2 anos = 5% do salário,
+de 3 a 5 anos = 10%,
+acima de 5 anos = 15%. */
+
+/* const funcionario = {
+    nome: "João Pedro",
+    cargo: "Desenvolvedor Back-end",
+    salario: 3456.96,
+    anosExperiencia: 6,
+}
+
+for (const key in funcionario) {
+    console.log(`${key} - ${funcionario[key]}`);
+}
+
+if (funcionario.anosExperiencia > 5) {
+    console.log(`Bônus de 15% - R$${(funcionario.salario * 1.15).toFixed(2)}`);
+} else if (funcionario.anosExperiencia > 3) {
+    console.log(`Bônus de 10% - R$${(funcionario.salario * 1.10).toFixed(2)}`);
+} else if (funcionario.anosExperiencia >= 0) {
+    console.log(`Bônus de 5% - R$${(funcionario.salario * 1.05).toFixed(2)}`);
+} */
 
 /* ---------------------------------------------------------------------------------- */
 
@@ -45,12 +100,48 @@ no inventário do jogador (ex: { espada: 1, poção: 5, escudo: 2 }). Use for...
 listar o inventário completo. Permita que o usuário informe um item para usar:
 reduza a quantidade em 1 ou exiba "item esgotado" se for zero. */
 
+/* const inventario = {
+    rareCandy: 1,
+    revive: 2,
+    potion: 24,
+    fullRestore: 4,
+    tm050: 2,
+    hm002: 1
+}
+
+let usarItem = "";
+let itemUsado = "";
+
+do {
+    console.log("----------------------");
+    for (const key in inventario) {
+        console.log(`${key}: ${inventario[key]}`);
+    }
+    console.log("----------------------");
+    usarItem = prompt("Deseja usar um item? ");
+    if (usarItem.toLowerCase() === "sim" || usarItem.toLowerCase() === "s") {
+        for (const key in inventario) {
+            console.log(` - ${key}`);
+        }
+        itemUsado = prompt("Qual item? ");
+        if (inventario[itemUsado] <= 0) {
+            console.log(`[ERRO] VOCÊ NÃO TEM MAIS ESSE ITEM NO INVENTÁRIO`);
+        } else {
+            console.log(`${itemUsado} consumido`);
+            inventario[itemUsado] --;
+        }
+        console.log("----------------------");
+    }
+} while (usarItem.toLowerCase() === "sim" || usarItem.toLowerCase() === "s"); */
+
 /* ---------------------------------------------------------------------------------- */
 
 /* 5. Crie um objeto representando o orçamento mensal de uma pessoa, com
 categorias como alimentação, transporte, lazer e saúde, cada uma com valor
 planejado e valor gasto. Use for...in para percorrer as categorias e exibir se cada
 uma ficou dentro ou acima do orçamento, e calcule o saldo geral do mês. */
+
+
 
 /* ---------------------------------------------------------------------------------- */
 
