@@ -1,0 +1,41 @@
+Por que utilizar?
+- Velocidade no desenvolvimento
+- Experimentação
+- Redução de falhas
+- Colaboração com pessoas
+
+Controle local
+Controle distribuído
+
+Controle de versão de código é um tipo de registro de banco de dados especial para salvar código em algum lugar de uma maneira diferente.
+
+Plataformas: GitHub, BitBucket, SourceForge, TaraVault, Dogs, GitBucket
+
+---------------------------------------------------------------------------------
+
+git init
+touch (arquivo)
+nano (arquivo)
+open (arquivo)
+rm (arquivo)
+mkdir (pasta)
+
+Blob -> todo tipo de arquivo
+Árvores -> diretórios/pastas
+Commits -> Versões salvas
+Annotated Tags -> 
+
+---------------------------------------------------------------------------------
+
+Untracked - Recém adicionado ou removido, git não reconhece
+Unmodified - Arquivo não modificado
+Modified - Arquivo modificado
+Staged - Arquivo preparado para ser enviado para o repositório
+
+git config --global user.name (nome)
+git config --global user.email (email)
+git config --list
+git status
+git add (file) | git add .
+git rm --cached (file)
+git commit -m "(mensagem)"
